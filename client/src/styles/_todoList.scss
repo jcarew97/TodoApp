@@ -1,0 +1,79 @@
+.list{
+  background-color: $primary;
+  width: 400px;
+  padding: 20px;
+
+	.list_item{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+    color: #e4dbcb;
+
+    .list_itemTask{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      .checkbox{
+        width: 18px;
+        height: 18px;
+        border: 1px solid $alt;
+        background-color: $bg;
+        margin-right: 5px;
+        position: relative;
+        box-sizing: content-box;
+
+        span{
+          font-size: 18px;
+          line-height: 18px;
+          color: $alt;
+          display: none;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+      .task{
+        font-size: 24px;
+        color: $bg;
+      }
+
+    }
+
+		.list_itemBtns{
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+      align-items: center;
+			width: 100px;
+
+      span{
+        font-size: 20px;
+        line-height: 24px;
+        color: $bg;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+		}
+
+    &.done{
+      .list_itemTask .checkbox span{
+        display: block;
+      }
+    }
+	}
+
+  .list_form{
+    button{
+      border: 2px solid $alt2;
+    }
+  }
+}
