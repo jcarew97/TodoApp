@@ -1,8 +1,10 @@
-.todoForm{
-  input{
-    border: 1px solid $primary;
-    background-color: $bg;
+@use './variables' as v;
+
+.todoForm {
+  input {
+    border: 1px solid v.$primary;
+    background-color: v.$bg;
     border-radius: 8px;
-    color: $primary;
+    color: v.$primary;
   }
 }
